@@ -8,3 +8,15 @@ quarkus:
     category:
     console:
       format: '%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n'
+  datasource:
+    db-kind: postgresql
+    username: postgres
+    password: secret      
+    jdbc:
+      url: "jdbc:postgresql://localhost:5432/demo"
+      max-size: 16
+  hibernate-orm:
+    log:
+      sql: true
+    database:
+      generation: drop-and-create

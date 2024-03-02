@@ -2,3 +2,7 @@
 	$> http://localhost:8080/q/swagger-ui/
 	
 	$> http://localhost:8080/q/openapi
+	
+	$> curl -X POST http://localhost:8080/api/fruits  -H 'Content-Type: application/json' -d '{"name":"my_login", "description":"ciao mamma"}'
+	
+	$> curl -X POST http://localhost:8080/api/persons -H "Content-Type: application/json" -d '{"firstname":"John","lastname":"Doe"}'
