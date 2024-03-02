@@ -1,0 +1,10 @@
+quarkus:
+  default-locale: "en-US"
+  swagger-ui:
+    always-include: true
+    validator-url: localhost
+  log:
+    level: INFO  
+    category:
+    console:
+      format: '%d{HH:mm:ss} %-5p [%c{2.}] (%t) %s%e%n'
