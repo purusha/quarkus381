@@ -6,3 +6,13 @@
 	$> curl -X POST http://localhost:8080/api/fruits  -H 'Content-Type: application/json' -d '{"name":"my_login", "description":"ciao mamma"}'
 	
 	$> curl -X POST http://localhost:8080/api/persons -H "Content-Type: application/json" -d '{"firstname":"John","lastname":"Doe"}'
+	
+	
+	------------- # ------------- # ------------- # ------------- # ------------- # -------------
+	
+	se si usa la quarkus-smallrye-jwt vedere la guida per capire il funzionamento
+	https://developer.okta.com/blog/2022/05/23/java-rest-api-quarkus
+	
+	------------- # ------------- # ------------- # ------------- # ------------- # -------------
+	
+	

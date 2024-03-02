@@ -32,26 +32,26 @@
 
 		<!-- health -->
 		<dependency>
-		    <groupId>io.quarkus</groupId>
-		    <artifactId>quarkus-smallrye-health</artifactId>
-		</dependency>		
-		
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-smallrye-health</artifactId>
+		</dependency>
+
 		<!-- persistence -->
 		<dependency>
-		    <groupId>io.quarkus</groupId>
-		    <artifactId>quarkus-jdbc-postgresql</artifactId>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-jdbc-postgresql</artifactId>
 		</dependency>
 		<dependency>
-		    <groupId>io.quarkus</groupId>
-		    <artifactId>quarkus-hibernate-orm-panache</artifactId>
-		</dependency>		
-		
-		<!-- config -->		
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-hibernate-orm-panache</artifactId>
+		</dependency>
+
+		<!-- config -->
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-config-yaml</artifactId>
 		</dependency>
-		
+
 		<!-- tools -->
 		<dependency>
 			<groupId>org.apache.commons</groupId>
@@ -62,7 +62,7 @@
 			<artifactId>lombok</artifactId>
 			<version>1.18.30</version>
 		</dependency>
-		
+
 		<!--
 		<dependency>
 			<groupId>io.quarkus</groupId>
@@ -72,8 +72,8 @@
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-smallrye-jwt</artifactId>
 		</dependency>
-		-->		
-		
+		-->
+
 		<!-- api -->
 		<dependency>
 			<groupId>org.eclipse.microprofile.openapi</groupId>
@@ -91,19 +91,19 @@
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-resteasy-reactive-jackson</artifactId>
 		</dependency>
-		
+
 		<!-- di -->
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-arc</artifactId>
 		</dependency>
-		
+
 		<!-- validation -->
 		<dependency>
 			<groupId>io.quarkus</groupId>
 			<artifactId>quarkus-hibernate-validator</artifactId>
 		</dependency>
-		
+
 		<!-- tools 4 testing -->
 		<dependency>
 			<groupId>io.quarkus</groupId>
@@ -111,11 +111,16 @@
 			<scope>test</scope>
 		</dependency>
 		<dependency>
+			<groupId>io.quarkus</groupId>
+			<artifactId>quarkus-panache-mock</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
 			<groupId>io.rest-assured</groupId>
 			<artifactId>rest-assured</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
+
 	</dependencies>
 	<build>
 		<plugins>
@@ -148,7 +153,8 @@
 				<version>${surefire-plugin.version}</version>
 				<configuration>
 					<systemPropertyVariables>
-						<java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+						<java.util.logging.manager>
+							org.jboss.logmanager.LogManager</java.util.logging.manager>
 						<maven.home>${maven.home}</maven.home>
 					</systemPropertyVariables>
 				</configuration>
@@ -176,8 +182,10 @@
 								</goals>
 								<configuration>
 									<systemPropertyVariables>
-										<native.image.path>${project.build.directory}/${project.build.finalName}-runner</native.image.path>
-										<java.util.logging.manager>org.jboss.logmanager.LogManager</java.util.logging.manager>
+										<native.image.path>
+											${project.build.directory}/${project.build.finalName}-runner</native.image.path>
+										<java.util.logging.manager>
+											org.jboss.logmanager.LogManager</java.util.logging.manager>
 										<maven.home>${maven.home}</maven.home>
 									</systemPropertyVariables>
 								</configuration>
