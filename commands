@@ -1,0 +1,6 @@
+mvn io.quarkus:quarkus-maven-plugin:2.9.0.Final:create \
+    -DprojectGroupId=com.relatech.rest \
+    -DprojectArtifactId=hello \
+    -DclassName="com.relatech.rest.quarkus.HelloResource" \
+    -Dpath="/hello" \
+    -Dextensions="smallrye-jwt,resteasy-reactive,container-image-docker,hibernate-orm-panache"
